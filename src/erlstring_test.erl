@@ -9,11 +9,12 @@
 
 
 test(No) ->
+	%{T2, _} = timer:tc(?MODULE, tests, [No]),	
 	{T1,_R} = timer:tc(?MODULE, testr, [No]),
+	io:format("erlstring : ~p ~n", [_R]),
 	%{T3,_} = timer:tc(erlstring, to_string, [R]),
-	{T2, _} = timer:tc(?MODULE, tests, [No]),	
-	io:format("erlstring time: ~p ~n", [T1]),
-	io:format("string time: ~p~n", [T2]).
+	io:format("erlstring time: ~p ~n", [T1]).
+	%io:format("string time: ~p~n", [T2]).
 
 test1(No) ->
 	io:format("Rope: ~p~n", [timer:tc(?MODULE, testr, [No])]),
