@@ -5,7 +5,11 @@ erlstring is an alternate to Erlang strings..
 
 Features
 ========
-Currently supports only concatenation of strings. 
+Currently supports the following functionalities:
+concat/2 - concatenation of strings (erlstring and string)
+len/1 - length of the string.
+to_string/1 - get back the string from erlstring.
+
 
 Erlang strings are list. So concatenation operation is O(n). 
 For large number of concatenations it can be very slow O(n*m) 
@@ -24,7 +28,6 @@ S = erlstring:to_string(E2).		% get back concatenated string if required.
 TODO
 ====
 substr
-len
 str
 spec and eunit
 
