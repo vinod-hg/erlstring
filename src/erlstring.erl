@@ -6,7 +6,8 @@
 
 -export([new/0,
 		 concat/2,
-		 to_string/1
+		 to_string/1,
+		 len/1
 		]).
 
 
@@ -21,6 +22,8 @@ concat(Tree, String) ->
 to_string(Tree) ->
 	to_list(Tree).
 
+len({_H,Len,_LT, _RT}) ->
+	Len.
 
 %% Internal Functions
 
